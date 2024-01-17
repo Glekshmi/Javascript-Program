@@ -1,4 +1,4 @@
-function digitProd() {
+function posNeg() {
    let num;
    num = document.getElementById("num").value;
    val = num.trim();
@@ -8,13 +8,10 @@ function digitProd() {
       alert("Invalid input!");
    } else {
       n = parseInt(val);
-      let prod = 1,
-         rem;
-      while (n > 0) {
-         rem = n % 10;
-         prod = prod * rem;
-         n = parseInt(n / 10);
+      if (n >= 0) {
+         document.getElementById("answer").innerHTML = "Positive number";
+      } else {
+         document.getElementById("answer").innerHTML = "Negative number";
       }
-      document.getElementById("answer").value = prod;
    }
 }

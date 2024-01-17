@@ -2,29 +2,28 @@
 <html lang="en">
    <head>
       <title>javascript</title>
-      <script src="script/digitProd.js"></script>
+      <script src="script/printEvenNum.js"></script>
       <link rel="stylesheet" href="./style/style.css">
    </head>
    <body>
       <div class="container">
          <div class="center">
             <div class="title">
-               <h3>31. Product of Digits in a Number</h3>
+               <h3>37. Even Numbers from 1 to N</h3>
             </div>
             <div class="inputBox">
                <form id="formRest">
                   <fieldset>
                      <div class="formItems">
                         <label>Enter a number :</label>
-                        <input type="text" id="num" class="first"><br><br>
+                        <input type="text" id="limit" class="first"><br><br>
                         <div class="Btn">
-                           <input type="reset" value="Clear">
-                           <input type="button" onclick="digitProd()" value="Show">
+                           <input type="reset" value="Clear" class="clr">
+                           <input type="button" onclick="EvenNum()" value="Show">
                         </div>
-                     </div>
-                     <div class="footer">
-                        <p>Product = </p>
-                        <input type="text" id="answer">
+                        <div class="footer">
+                           <p id="answer"></p>
+                        </div>
                      </div>
                   </fieldset>
                </form>
