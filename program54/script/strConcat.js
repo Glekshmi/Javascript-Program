@@ -10,7 +10,7 @@ function strConcat() {
    if ((count != "1") || (string1 == "") || (string2 == "")) {
       alert("invalid input!!");
    } else {
-      let result = string1 + string2;
-      document.getElementById("answer").innerHTML = result;
+      let result = string1.concat(string2);
+      document.getElementById("answer").innerHTML = "concatinated string : " + result;
    }
 }
