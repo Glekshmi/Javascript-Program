@@ -1,63 +1,31 @@
-function sum() {
-   let num1, num2;
-   num1 = document.getElementById("num1").value;
-   num2 = document.getElementById("num2").value;
-   if ((num1.charAt(0) == " ") || (num1 == "") || (isNaN(num1)) || (num2.charAt(0) == " ") || (num2 == "") || (isNaN(num2))) {
-      alert("Invalid Input!");
-   } else {
-      n1 = parseInt(num1);
-      n2 = parseInt(num2);
-      let result;
-      result = n1 + n2;
-      document.getElementById("answer").innerHTML = "Result = " + result;
-   }
-}
-
-function diff() {
-   let num1, num2;
-   num1 = document.getElementById("num1").value;
-   num2 = document.getElementById("num2").value;
-   if ((num1.charAt(0) == " ") || (num1 == "") || (isNaN(num1)) || (num2.charAt(0) == " ") || (num2 == "") || (isNaN(num2))) {
-      alert("Invalid Input!");
-   } else {
-      n1 = parseInt(num1);
-      n2 = parseInt(num2);
-      let result;
-      result = n1 - n2;
-      document.getElementById("answer").innerHTML = "Result = " + result;
-   }
-}
-
-function div() {
-   let num1, num2;
-   num1 = document.getElementById("num1").value;
-   num2 = document.getElementById("num2").value;
-   if ((num1.charAt(0) == " ") || (num1 == "") || (isNaN(num1)) || (num2.charAt(0) == " ") || (num2 == "") || (isNaN(num2))) {
-      alert("Invalid Input!");
-   } else {
-      n1 = parseInt(num1);
-      n2 = parseInt(num2);
-      let result;
-      result = n1 / n2;
-      document.getElementById("answer").innerHTML = "Result = " + result;
-   }
-}
-
-function prod() {
-   let num1, num2;
-   num1 = document.getElementById("num1").value;
-   num2 = document.getElementById("num2").value;
-   if ((num1.charAt(0) == " ") || (num1 == "") || (isNaN(num1)) || (num2.charAt(0) == " ") || (num2 == "") || (isNaN(num2))) {
-      alert("Invalid Input!");
-   } else {
-      n1 = parseInt(num1);
-      n2 = parseInt(num2);
-      let result;
-      result = n1 * n2;
-      document.getElementById("answer").innerHTML = "Result = " + result;
-   }
-}
-
-function clear() {
-   document.getElementById("formRest").reset();
-}
+function dis(val) { 
+            document.getElementById("result").value += val 
+        } 
+  
+        function myFunction(event) { 
+            if (event.key == '0' || event.key == '1' 
+                || event.key == '2' || event.key == '3' 
+                || event.key == '4' || event.key == '5' 
+                || event.key == '6' || event.key == '7' 
+                || event.key == '8' || event.key == '9' 
+                || event.key == '+' || event.key == '-' 
+                || event.key == '*' || event.key == '/') 
+                document.getElementById("result").value += event.key; 
+        } 
+        var cal = document.getElementById("calcu"); 
+        cal.onkeyup = function (event) { 
+            if (event.keyCode === 13) { 
+                console.log("Enter"); 
+                let x = document.getElementById("result").value 
+                console.log(x); 
+                solve(); 
+            } 
+        } 
+        function solve() { 
+            let x = document.getElementById("result").value 
+            let y = math.evaluate(x) 
+            document.getElementById("result").value = y 
+        } 
+        function clr() { 
+            document.getElementById("result").value = "" 
+        } 

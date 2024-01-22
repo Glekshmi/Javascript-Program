@@ -8,52 +8,27 @@ function electricityBill() {
       alert("Invalid input!");
    } else {
       unit=parseInt( unit);
+      let totCharge=0;
 		if( unit<=50)
-		{
-			
-				amount=50*2.60;
-		}
-		else if((n>50)&&(n<=100))
 		{	
-			sum1=0;
-			sum=50*2.60;
-			for(i=51;i<=n;i++)
-				sum1=((i-50)*3.25);
-			sum=sum+sum1;
+		 totCharge=50*2.60;
 		}
-		else if((n>100)&&(n<=200))
-		{
-			sum=0;
-			sum=50*2.60;
-			sum=sum+(50*3.25);
-			for(i=101;i<=n;i++)
-				sum1=((i-100)*5.65); 
-			sum=sum+sum1;
-		
+		else if(unit<=100)
+		{	
+		 totCharge=50*2.60+(unit-50)*3.25;	
 		}
-		else if((n>200)&&(n<=700))
+		else if(unit<=200)
 		{
-			sum=0;
-			sum=50*2.60;
-			sum=sum+(50*3.25);
-			sum=sum+(100*5.65);
-			for(i=201;i<=n;i++)
-				sum1=((i-200)*7.25);
-			sum=sum+sum1;
+	         totCharge=50*2.60+50*3.25+(unit-100)*5.65;		
+		}
+		else if(unit>200)
+		{
+		 totCharge=50*2.60+50*3.25+100*5.65+(unit-100)*7.25;	
 		}
 		else
 		{
-			sum=0;
-			sum=50*2.60;
-			sum=sum+(50*3.25);
-			sum=sum+(100*5.65);
-			sum=sum+(500*7.25);
-			for(var i=701;i<=n;i++)
-				sum1=((i-700)*7.25);
-			txt=sum1*(0.5/100)
-			sum=sum+sum1+txt;
+		 totCharge=50*2.60+50*3.25+100*5.65+100*7.25+(unit-700)*7.25*0.05;	
 		}
-		document.getElementById("answer1).innerHTML = "units consumption :"+n;
-		document.getElementById("answer2").innerHTML = "Total charges : "+sum;
+		document.getElementById("answer").innerHTML = "Total charges : "+totCharge;
    }
 }
