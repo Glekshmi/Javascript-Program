@@ -1,0 +1,36 @@
+*{
+	padding:0;
+	margin:0;
+}
+.container{
+	padding-left: 37%;
+}
+.title{
+	padding-top: 5%;
+	padding-left: 30%;
+
+}
+.content{
+	padding-top:4%;
+}
+.first {
+    margin-left: 0.5%;
+}
+.addBtn{
+	padding-left: 44%;
+    	padding-top: 4%;
+}
+.sumBox{
+	padding-top: 2%;
+    	padding-left: 14%;
+}
+.center{
+	padding-right:59%;
+}
+.inputBox{
+	padding-top: 8%;
+	padding-left: 29%;
+}
+.formItems{
+	padding:8%;
+}
