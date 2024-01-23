@@ -11,7 +11,7 @@ function stringPrefix() {
       alert("invalid input!!");
    } else {
       let result = string.indexOf(subStrng);
-      if (result == 0)
+      if (result!=0)
          document.getElementById("answer").innerHTML = "prefix";
       else
          document.getElementById("answer").innerHTML = "not a prefix";

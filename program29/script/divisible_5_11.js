@@ -10,6 +10,10 @@ function divisible() {
    {
      alert("Invalid input!");
    }
+   else if(val<55)
+   {
+     alert("Try a limit above 54!");
+   }
    else
    {
      n=parseInt(val);

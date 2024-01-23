@@ -12,12 +12,16 @@ function specChar() {
    } else {
       let length1 = string.length;
       let str = [];
+      let pos;
       str = string;
       for (let i = 0; i < length1; i++) {
-         if (str[i] == key)
-            document.getElementById("answer").innerHTML = "index of " + key + " : " + i;
-         else
+         if (str[i] == key){
+	  document.getElementById("answer").innerHTML = "index of " + key + " : " + i; 
+	  break;   
+	}
+         else{
             document.getElementById("answer").innerHTML = "character not found";
-      }
+	  }
+	}  
    }
 }

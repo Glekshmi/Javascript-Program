@@ -17,12 +17,15 @@ function missingLetter() {
 			document.getElementById("answer").innerHTML="There is no missing letter!";
 		else
 		{
+			let arr=[];
+			let k=-1;
 			let tempString=letters.split("");
 			let loc=tempString.indexOf(hold1);
 			let strIndex=tempString.indexOf(hold2);
-			for(let i=loc;i<strIndex;i++)
-				if (!strng.includes(tempString[i]))	
-				document.getElementById("answer").innerHTML=tempString[i]+"<br>";
+			for(let i=loc;i<=strIndex;i++){
+				if (!strng.includes(tempString[i]))
+				arr[++k]=tempString[i];}
+				document.getElementById("answer").innerHTML=arr+"<br>";
 		}
    }
 }

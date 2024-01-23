@@ -1,6 +1,6 @@
 function arithmeticOp() {
    let num1, num2, choice;
-   choice = document.getElementById("ch").value; {
+   choice = document.getElementById("ch").value;
       num1 = document.getElementById("num1").value;
       num2 = document.getElementById("num2").value;
       num1 = num1.trim();
@@ -13,7 +13,6 @@ function arithmeticOp() {
          num1 = parseInt(num1);
          num2 = parseInt(num2);
          let result;
-         choice = parseInt(choice);
          switch (choice) {
             case 1:
                result = num1 + num2;
@@ -28,9 +27,9 @@ function arithmeticOp() {
                result = num1 * num2;
                break;
             case 5:
+	       alert("exit");
                break;
          }
+	document.getElementById("answer").innerHTML="Answer = "+result;
       }
-   }
-
 }
